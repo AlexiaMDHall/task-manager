@@ -1,9 +1,16 @@
 // src/components/AddTaskForm.js
+// ══════════════════════════════════════════════════════
+// COMPONENT: AddTaskForm
+// PURPOSE:  Controlled form that lets the user type a new
+//           task title and submit it. Does NOT own the task
+//           list — it only signals upward via onAdd callback.
+// PATTERN:  Controlled component — input value lives in state.
+// ══════════════════════════════════════════════════════
 'use client';
 
 import { useState } from 'react';
 
-export default function AddTaskForm({ onAdd }) {
+export default function AddTaskForm({ onAdd = () => {} }) {
   const [title, setTitle] = useState('');
 
   function handleSubmit(e) {
@@ -16,7 +23,7 @@ export default function AddTaskForm({ onAdd }) {
   return (
     <form onSubmit={handleSubmit} className="flex gap-2 mb-6">
       <input
-        value={title}                   {/* controlled: value from state */}
+        value={title}                   /* controlled: value from state */
         onChange={(e) => setTitle(e.target.value)}
         placeholder="New task..."
         className="flex-1 border rounded px-3 py-2 text-sm"
