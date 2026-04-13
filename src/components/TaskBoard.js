@@ -78,6 +78,21 @@ function handleDelete(id) {
       <p className="text-sm text-gray-500 mb-4">
         {completed} of {tasks.length} complete
       </p>
+      <div className="flex gap-2 mb-4">
+      {['all', 'active', 'completed'].map((f) => (
+        <button
+          key={f}
+          onClick={() => setFilter(f)}
+          className={`px-3 py-1 rounded text-sm capitalize
+            ${filter === f
+              ? 'bg-green-700 text-white'
+              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+        >
+          {f}
+        </button>
+      ))}
+    </div> 
       <AddTaskForm onAdd={handleAdd} />
       <TaskStats
         total={tasks.length}    
