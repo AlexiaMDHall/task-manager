@@ -13,7 +13,7 @@ export default function Taskcard({ title, done,id, onToggle, onDelete }) {
       // Conditional background and border colors based on 'done' status
       // Task title with conditional styling: line-through and gray text if done, normal if not
     <div className={`flex items-center justify-between p-3 border-b rounded-lg 
-      ${done ? 'bg-green-50 border-green-300' : 'bg-white border-gray-300'}`}>
+      ${done ? 'bg-green-50 border-green-300' : 'bg-blue-50 border-gray-300'}`}>
     
       <span className={`text-lg font-semibold 
         ${done ? 'line-through text-gray-400' : 'text-gray-800'}`}>  
@@ -23,13 +23,13 @@ export default function Taskcard({ title, done,id, onToggle, onDelete }) {
        <div className="flex gap-3 text-sm">
         <button
           className="text-green-700 hover:underline"
-          onClick={() => onToggle(id)}
+          onClick={() => onToggle(id)} 
         >
           {done ? 'Undo' : 'Complete'}
         </button>
         <button
           className="text-red-500 hover:underline"
-          onClick={() => onDelete(id)}
+          onClick={() => onDelete(id)} 
         >
           Delete
         </button>
