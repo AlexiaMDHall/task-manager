@@ -30,7 +30,7 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## AI Usage Log
-<ul>Explaing the three conditional rendering patterns<ul>
-<ul>Define a task array <ul>
-<ul>Checking why errors were returned on certain lines (Taskcard and taskBoard)
+<li>Explaing the three conditional rendering patterns<li>
+<li>Define a task array <li>
+<li>Checking why errors were returned on certain lines (Taskcard and taskBoard)<li>
 
